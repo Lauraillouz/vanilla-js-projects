@@ -13,14 +13,13 @@ btn.addEventListener("click", function () {
 
 // generate a random number for the length of the colors array
 const getRandomNumber = () => {
-  let roundNumber;
-  // Creating a condition, to get number closest to Math.random. Meaning if we have over .5, it'll give the superior number beacause we're adding 0.5
-  if (Math.random() * colors.length <= 2) {
-    roundNumber = Math.floor(Math.random() * colors.length + 0.5);
-    console.log(roundNumber, "in if");
+  let roundNumber = Math.random() * colors.length;
+  // Creating a condition, to get number closest to Math.random. Meaning if we have over .5, it'll give the superior number beacause we're adding 0.5, but to not go over last item in array
+  if (roundNumber < 3) {
+    roundNumber = Math.floor(roundNumber + 0.5);
   } else {
-    roundNumber = Math.floor(Math.random() * colors.length);
-    console.log(roundNumber, "in else");
+    roundNumber = Math.floor(roundNumber);
   }
+
   return roundNumber;
 };
