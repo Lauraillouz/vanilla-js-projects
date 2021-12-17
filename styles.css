@@ -1,8 +1,10 @@
+/* GENRAL */
 * {
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  text-transform: capitalize;
 }
 
 h1 {
@@ -33,6 +35,8 @@ button:hover {
   color: white;
 }
 
+/* clor flipper */
+
 .index {
   margin-right: 40px;
 }
@@ -40,7 +44,78 @@ button:hover {
   margin-left: 40px;
 }
 
+/* counter */
+
 span {
   display: block;
   margin: 20px;
+}
+
+/* reviews */
+
+.review {
+  box-shadow: 0px 0px 10px lightgray;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  height: 500px;
+}
+
+.prev-button,
+.next-button {
+  margin: 20px;
+  color: lightskyblue;
+  font-weight: bolder;
+}
+
+.underline {
+  height: 5px;
+  background-color: lightskyblue;
+  width: 10%;
+  margin: auto;
+}
+
+.underline-job {
+  height: 2px;
+  background-color: lightskyblue;
+  width: 10%;
+  margin: 0 auto 20px;
+}
+
+.profile-img {
+  border-radius: 99px;
+  width: 150px;
+  left: 10px;
+  top: 10px;
+}
+.profile-container {
+  background-color: lightskyblue;
+  height: 150px;
+  margin: auto;
+}
+
+.is-absolute {
+  position: absolute;
+}
+.is-relative {
+  position: relative;
+}
+
+#job {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+p {
+  text-transform: none;
+}
+
+#info {
+  box-shadow: -10px -10px 0px 0px lightskyblue;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  width: 50%;
 }
