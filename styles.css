@@ -119,3 +119,50 @@ p {
   margin: auto;
   width: 50%;
 }
+
+/* Navbar */
+.nav-header {
+  padding: 5px 30px;
+}
+
+.menu-line {
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  margin: 10px;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.logo {
+  max-width: 30%;
+}
+
+.nav-toggle {
+  max-height: 50px;
+  width: 50px;
+  padding: 0;
+  margin: auto 0;
+  background-color: transparent;
+}
+
+.nav-links {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
