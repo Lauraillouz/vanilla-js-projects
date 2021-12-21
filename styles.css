@@ -7,6 +7,14 @@
   text-transform: capitalize;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: turquoise;
+}
+
 h1 {
   font-family: "Courier New", Courier, monospace;
   padding: 20px;
@@ -23,15 +31,14 @@ ul {
   padding: 30px;
 }
 
-.btn,
-.nav-toggle {
+button {
   padding: 10px;
   border-radius: 10px;
   border: none;
 }
 
-.btn:hover {
-  background-color: black;
+button:hover {
+  cursor: pointer;
   color: white;
 }
 
@@ -139,6 +146,12 @@ p {
   margin: 10px;
 }
 
+.nav-toggle:hover,
+.sidebar-toggle:hover {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+
 .is-flex {
   display: flex;
 }
@@ -153,7 +166,7 @@ p {
 
 .logo {
   max-width: 30%;
-  min-width: 100px;
+  min-width: 200px;
   max-height: inherit;
 }
 
@@ -176,18 +189,61 @@ p {
   margin: 0 10px;
 }
 
-.nav-links li:hover {
-  color: blue;
-  cursor: pointer;
+/* Sidebar */
+.sidebar-toggle {
+  background-color: transparent;
+  top: 0;
 }
 
+.sidebar {
+  background-color: thistle;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  transition: 0.5s;
+  transform: translate(-100%);
+}
+
+.show-sidebar {
+  transition: 0.5s;
+  transform: translate(0);
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.close-btn {
+  background-color: transparent;
+}
+
+.nav-links-sidebar {
+  justify-content: start;
+  flex-direction: column;
+}
+
+.nav-link-sidebar {
+  margin: 10px 0 0 0;
+}
+.nav-link-sidebar a:hover {
+  color: white;
+}
+
+/* Media queries for everything */
 @media (min-width: 769px) {
+  .sidebar {
+    width: 30%;
+  }
   .nav-toggle {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: column;
