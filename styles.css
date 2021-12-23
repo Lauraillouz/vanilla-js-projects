@@ -331,3 +331,59 @@ p {
   visibility: visible;
   z-index: 10;
 }
+
+/* Questions project */
+.question {
+  width: 70vw;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid gold;
+  border-radius: 10px;
+}
+
+.question-btn {
+  background-color: transparent;
+  color: gold;
+  font-weight: bolder;
+  padding: 0;
+}
+
+.plus-icon,
+.minus-icon {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0;
+}
+
+.question-btn:hover {
+  border-color: black;
+  color: black;
+  transition-duration: 0.5s;
+  transform: rotate(90deg);
+}
+
+.border-section {
+  margin: 20px 0;
+  border-top: 1px solid gold;
+}
+.little-top-padding {
+  padding-top: 15px;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
