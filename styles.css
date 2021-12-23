@@ -346,6 +346,7 @@ p {
   color: gold;
   font-weight: bolder;
   padding: 0;
+  transition-duration: 0.5s;
 }
 
 .plus-icon,
@@ -386,4 +387,57 @@ p {
 }
 .show-text .plus-icon {
   display: none;
+}
+
+/* Menu */
+.menu-item {
+  width: 350px;
+  margin: 10px 30px;
+}
+.menu-title {
+  text-align: center;
+}
+.section-center-menu {
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.border-section-menu {
+  border-color: lightskyblue;
+  padding-top: 10px;
+}
+
+.photo {
+  border: 5px solid lightskyblue;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item-price {
+  color: lightskyblue;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+.filter-btn {
+  margin: 0 10px;
+  background-color: transparent;
+  border: 2px solid lightskyblue;
+  color: lightskyblue;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.filter-btn:hover {
+  background-color: lightskyblue;
+  color: white;
+  transition-duration: 0.5s;
 }
