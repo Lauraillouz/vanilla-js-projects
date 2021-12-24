@@ -441,3 +441,81 @@ p {
   color: white;
   transition-duration: 0.5s;
 }
+
+/* Video Project */
+
+.video-header {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+/* overlay */
+.video-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.video-title {
+  z-index: 1;
+  color: white;
+}
+
+.switch-btn {
+  z-index: 1;
+  position: relative;
+  padding: 0;
+}
+.switch-btn:hover {
+  color: blue;
+}
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: yellow;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+}
+
+.slide .switch {
+  left: 50%;
+}
+
+.preloader {
+  position: fixed;
+  z-index: 2;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.preloader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hide-preloader {
+  display: none;
+  z-index: -999;
+  visibility: none;
+}
