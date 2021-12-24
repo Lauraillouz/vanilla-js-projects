@@ -20,8 +20,7 @@ const randomDinner = [
 
 const annoySomeoneWithDinner = () => {
   let thisIsDinner = [];
-  3;
-  3;
+
   for (i = 0; i < randomDinner.length; i++) {
     if (thisIsDinner.length < 4) {
       thisIsDinner.push(Math.floor(Math.random() * randomDinner.length));
