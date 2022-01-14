@@ -133,7 +133,6 @@ p {
   z-index: -1;
 }
 .nav-header {
-  padding: 5px 30px;
   width: 100%;
   max-height: 80px;
   z-index: 0;
@@ -178,14 +177,16 @@ p {
   background-color: transparent;
 }
 
-.nav-links {
+.nav-links,
+.links {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 0;
 }
 
-.nav-links li {
+.nav-links li,
+.links li {
   margin: 0 10px;
 }
 

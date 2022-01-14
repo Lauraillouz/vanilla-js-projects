@@ -4,10 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Project</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Scroll Project</h1>
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <!--nav header-->
+          <div class="nav-header is-flex justify-content-space-between">
+            <img src="./coding.svg" class="logo" alt="logo" />
+            <button class="nav-toggle btn-toggle">v</button>
+          </div>
+          <!--links-->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--banner-->
+      <div class="banner-scroll">
+        <div class="container is-flex">
+          <h1>Scroll project</h1>
+          <p class="scroll-presentation">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+            dolorum suscipit, amet minima obcaecati ad earum quisquam beatae aut
+            autem incidunt magnam! In omnis error a ullam, vitae nihil
+            voluptatum.
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
+        </div>
+      </div>
+      <!--about-->
+      <section id="about" class="section is-flex">
+        <div class="title">
+          <h2>About <span class="colored-text inline">us</span></h2>
+        </div>
+      </section>
+      <!--services-->
+      <section id="services" class="section is-flex">
+        <div class="title">
+          <h2>Our <span class="colored-text inline">services</span></h2>
+        </div>
+      </section>
+      <!--tours-->
+      <section id="tours" class="section is-flex">
+        <div class="title">
+          <h2>Featured <span class="colored-text inline">tours</span></h2>
+        </div>
+      </section>
+      <!--footer-->
+      <footer class="section">
+        <p>
+          copyright &copy; something something about the company
+          <span id="date" class="inline">2022</span>
+        </p>
+      </footer>
+      <!--back to top butotn-->
+      <a href="#home" class="scrol-link top-link"> ^ </a>
+    </header>
     <script src="app.js"></script>
   </body>
 </html>
