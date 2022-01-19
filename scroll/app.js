@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
   //pageYOffset = read-only window property that returns the number of pixels the document has been scrolled vertically.
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
-  console.log(navHeight);
+  /* console.log(navHeight); */
 
   // makes nav fixed after a certain nav height dynamically
   if (scrollHeight > navHeight) {
@@ -41,4 +41,38 @@ window.addEventListener("scroll", () => {
   } else {
     topLink.classList.remove("show-link");
   }
+});
+
+/* Creating a smooth scroll through anchors in page and enable to arrive at the title and not after it */
+const scrollLinks = document.querySelectorAll(".scroll-link");
+
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // Prevent default behiaviour that makes the click go past the targeted title
+    e.preventDefault();
+
+    // Enable to navigate to navigate to targeted title via anchors
+    const id = e.currentTarget.getAttribute("href").slice(1); // slicing the hashtag
+    const element = document.getElementById(id); // getting the element
+    /* console.log(id) */
+    // calculate the heights
+    const navHeight = navbar.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const isFixedNav = navbar.classList.contains("fixed-nav");
+    // offsetTop = a number representing the top position of the element in pixels
+    let position = element.offsetTop - navHeight; // will give us the position value without the navbar so that the navbar doesn't cover our element
+    if (!isFixedNav) {
+      position = position - navHeight;
+    }
+    if (navHeight > 82) {
+      // adding the menu dropdown height when mobile version
+      position = position + containerHeight;
+    }
+    /* console.log(position); */
+    window.scrollTo({
+      left: 0,
+      top: position, // scrolls dynamically to the position poof the targeted element
+    });
+    linksContainer.style.height = 0; // closes the navbar toggle when we target an element from the menu
+  });
 });
