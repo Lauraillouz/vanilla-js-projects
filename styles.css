@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
   text-transform: capitalize;
 }
@@ -16,7 +16,7 @@ a:hover {
 }
 
 h1 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   padding: 20px;
 }
 
@@ -272,7 +272,7 @@ p {
 /* Modal */
 
 .hero {
-  background: no-repeat center center fixed url("modal/background.png");
+  background: no-repeat center center fixed url('modal/background.png');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -453,7 +453,7 @@ p {
 }
 /* overlay */
 .video-header::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -519,4 +519,60 @@ p {
   display: none;
   z-index: -999;
   visibility: none;
+}
+
+/* Tabs project */
+.about-center {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.about {
+  margin-left: 15px;
+}
+.tab-btn-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  border-radius: 10px 10px 0 0;
+}
+.tab-btn {
+  background-color: lightgray;
+  width: calc(100% / 3);
+}
+.tab-btn:first-child {
+  border-radius: 10px 0 0 0;
+}
+.tab-btn:nth-child(2) {
+  border-radius: 0;
+}
+.tab-btn:nth-child(3) {
+  border-radius: 0 10px 0 0;
+}
+.tab-btn:hover,
+.tab-active {
+  transition: 0.5s;
+  background-color: rgb(238, 236, 236);
+  color: black;
+}
+.content:not(.tab-active) {
+  display: none;
+}
+.about-img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+.tab-title {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+.about-content {
+  padding: 15px;
+  background-color: rgb(238, 236, 236);
+}
+.list {
+  flex-direction: column;
+  font-weight: bold;
+  padding: 10px;
 }
