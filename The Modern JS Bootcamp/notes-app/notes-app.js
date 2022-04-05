@@ -47,8 +47,6 @@ document.querySelector('#searchText').addEventListener('input', (e) => {
   renderNotes(notes, filters);
 });
 
-document.querySelector('#name-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log(e.target.elements.firstName.value); // allows us to access all the fields of the form by their names
-  e.target.elements.firstName.value = ''; // wipes the data after submitting the form
+document.querySelector('#for-fun').addEventListener('change', (e) => {
+  console.log(e.target.checked);
 });
