@@ -53,17 +53,22 @@ renderTodos(todoObj, filters);
 
 let todoText;
 
-document.querySelector('#addNewTodo').addEventListener('input', (e) => {
-  return (todoText = e.target.value);
-});
-
-document.querySelector('#addTodoButton').addEventListener('click', () => {
-  const newTodo = document.createElement('p');
-  newTodo.textContent = todoText;
-  document.querySelector('body').appendChild(newTodo);
-});
-
 document.querySelector('#filterTodos').addEventListener('input', (e) => {
   filters.searchText = e.target.value;
   renderTodos(todoObj, filters);
+});
+
+document.querySelector('#new-todo').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  newTodo = e.target.elements.newTodo.value;
+
+  todoObj.push({
+    text: newTodo,
+    completed: false,
+  });
+
+  renderTodos(todoObj, filters);
+
+  e.target.elements.newTodo.value = '';
 });

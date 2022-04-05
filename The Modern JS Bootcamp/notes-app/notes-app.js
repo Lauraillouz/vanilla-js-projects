@@ -40,15 +40,15 @@ document.querySelector('#createNoteButton').addEventListener('click', (e) => {
   e.target.textContent = 'Created!';
 });
 
-document.querySelector('#removeAllButton').addEventListener('click', () => {
-  document.querySelectorAll('.note').forEach((note) => {
-    note.remove();
-  });
-});
-
 // Difference between input and change event : change event will fire when you get out of the focus, as the input will fire every time what's inside changes
 document.querySelector('#searchText').addEventListener('input', (e) => {
   filters.searchText = e.target.value;
   //re renders when the input changes
   renderNotes(notes, filters);
+});
+
+document.querySelector('#name-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(e.target.elements.firstName.value); // allows us to access all the fields of the form by their names
+  e.target.elements.firstName.value = ''; // wipes the data after submitting the form
 });
