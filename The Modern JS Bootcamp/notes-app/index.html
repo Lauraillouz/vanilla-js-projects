@@ -9,12 +9,13 @@
       Search:
       <input id="searchText" type="text" placeholder="Filter todos..." />
     </label>
+    <select id="filter-by">
+      <option value="byEdited">Sort by last edited</option>
+      <option value="byCreated">Sort by recently created</option>
+      <option value="alphabetical">Sort alphabetically</option>
+    </select>
     <div id="notes"></div>
     <button id="createNoteButton">Create note</button>
-    <label>
-      <input id="for-fun" type="checkbox" />
-      Check me
-    </label>
     <script src="notes-app.js"></script>
   </body>
 </html>
